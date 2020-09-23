@@ -9,24 +9,22 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Vundle plugins go here
-"
+
 " Ale
 " show previer window cursor is on line with problem; need this before
 " installing
 let g:ale_cursor_detail = 0
 
-" Plugin 'sdeleon28/ale'
 Plugin 'dense-analysis/ale'
+" Plugin 'sdeleon28/ale'
 
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-syntastic/syntastic'
+Plugin 'vim-airline/vim-airline'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Quramy/tsuquyomi'
-" Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -169,34 +167,11 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 set backupcopy=yes
 
-" show syntastic errors at the bottom of the page
-" let g:syntastic_auto_loc_list=1
-
-" set location list height to 5 lines
-" let g:syntastic_loc_list_height=5
-
-" let g:syntastic_disabled_filetypes=['html']
-" let g:syntastic_enable_signs=1
-
 " JSX highlighting for .js files
 let g:jsx_ext_required = 0
 
 " Enable HTML/CSS highlighting in JS files
 let g:javascript_enable_domhtmlcss=1
-
-" use ESLint for JS syntax
-" Set up vim to use local eslint if it exists.
-" Fixes issue with global eslint not using local plugins
-" let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
-" if matchstr(local_eslint, "^\/\\w") == ''
-"     let local_eslint = getcwd() . "/" . local_eslint
-" endif
-" if executable(local_eslint)
-"     let g:syntastic_javascript_eslint_exec = local_eslint
-" endif
-"
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_scss_checkers = []
 
 " ALE
 autocmd FileType javascript let g:ale_linters = {
